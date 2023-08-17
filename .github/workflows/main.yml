@@ -1,4 +1,4 @@
-name: Java CI
+name: Push_Docker_image
 on: [push, pull_request]
 jobs:
   build:
