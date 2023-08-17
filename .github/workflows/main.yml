@@ -3,6 +3,7 @@ on: [push, pull_request]
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment: rpi4
     steps:
       - uses: actions/checkout@v2
       - uses: actions/cache@v2
