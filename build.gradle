@@ -20,6 +20,8 @@ dependencies {
     implementation("io.swagger.core.v3:swagger-annotations")
     runtimeOnly("ch.qos.logback:logback-classic")
     testImplementation("io.micronaut:micronaut-http-client")
+    compileOnly("org.projectlombok:lombok")
+
 }
 
 

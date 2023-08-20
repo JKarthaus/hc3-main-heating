@@ -1,14 +1,14 @@
 package de.karthaus.heatingControl3;
 
 import io.micronaut.runtime.Micronaut;
-import io.swagger.v3.oas.annotations.*;
-import io.swagger.v3.oas.annotations.info.*;
+import io.swagger.v3.oas.annotations.OpenAPIDefinition;
+import io.swagger.v3.oas.annotations.info.Info;
 
 @OpenAPIDefinition(
-    info = @Info(
-            title = "hc3-main-heating",
-            version = "0.0"
-    )
+        info = @Info(
+                title = "hc3-main-heating",
+                version = "1.0"
+        )
 )
 public class Application {
 

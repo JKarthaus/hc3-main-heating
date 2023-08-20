@@ -1,0 +1,49 @@
+micronaut:
+  application:
+    name: hc3MainHeating
+  server:
+    port: 8080
+  router:
+    static-resources:
+      swagger:
+        mapping: "/swagger/**"
+        paths: "classpath\:META-INF/swagger"
+      swagger-ui:
+        mapping: "/swagger-ui/**"
+        paths: "classpath\:META-INF/swagger/views/swagger-ui"
+# Message Bus configuration - DEV Enviroment
+rabbitmq:
+  host: localhost
+  port: 5672
+# Programm configuration
+hc3:
+  influxdb:
+    url: http://localhost:8086
+    username: hc3
+    password: hc3
+  temperature-queue:
+    name: hc-temperature
+  relais-exchange:
+    name: hc-relais-hat
+  sensor:
+    combustion: 28-0214630d20ff
+    leading-line: not_installed
+    return-line: not_installed
+    buffer: 28-0214631220ff
+    garage: 28-03146209ceff
+    outdoor: 28-0314624567ff
+  pump:
+    garage:
+      relais-id: 1
+      min-temp: 11
+    heating:
+      relais-id: 2
+      switch-on-temp: 45
+      min-diff-temp: 5
+    main-circuit:
+      relais-id: 3
+      switch-on-temp: 47
+      time-range-from: "05:20"
+      time-range-until: "22:10"
+
+      
