@@ -7,10 +7,16 @@ import lombok.Data;
 @Singleton
 public class HeatingControlContext {
 
+    // Vorlauf Brauchwasser
+    private Double inletGreyWaterTemp;
+    // Warmwasserspeicher
     private Double greyWaterTemp;
+    // Rücklauf Solar
+    private Double outletSolarTemp;
+    // Vorlauf brauchwasser
+    private Double inletHeatingTemp;
+    // Aussentemperatur
     private Double outdoorTemp;
-    private Double inletTemp;
-    private Double outletTemp;
 
 
 }

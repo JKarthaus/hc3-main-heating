@@ -6,36 +6,32 @@ micronaut:
   router:
     static-resources:
       swagger:
-        mapping: "/swagger/**"
-        paths: "classpath\:META-INF/swagger"
+        mapping: '/swagger/**'
+        paths: 'classpath:META-INF/swagger'
       swagger-ui:
-        mapping: "/swagger-ui/**"
-        paths: "classpath\:META-INF/swagger/views/swagger-ui"
+        mapping: '/swagger-ui/**'
+        paths: 'classpath:META-INF/swagger/views/swagger-ui'
 # Message Bus configuration - DEV Enviroment
 rabbitmq:
-  host: localhost
-  port: 5672
+  uri: amqp://hc3-werkstatt:5672
 # Programm configuration
+test: hc-temperature
 hc3:
   influxdb:
     url: http://localhost:8086
     username: hc3
     password: hc3
-  temperature-queue:
+  temperatureQueue:
     name: hc-temperature
   relais-exchange:
     name: hc-relais-hat
   sensor:
-    combustion: 28-0214630d20ff
-    leading-line: not_installed
-    return-line: not_installed
-    buffer: 28-0214631220ff
-    garage: 28-03146209ceff
-    outdoor: 28-0314624567ff
+    inlet-grey-water-sensor-id: "-"
+    greyWaterSensorID: " "
+    outletSolarSensorID: " "
+    inletHeatingSensorID: " "
+    outdoorSensorID: " "
   pump:
-    garage:
-      relais-id: 1
-      min-temp: 11
     heating:
       relais-id: 2
       switch-on-temp: 45

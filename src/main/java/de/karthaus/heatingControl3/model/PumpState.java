@@ -8,10 +8,11 @@ import lombok.Data;
 @Data
 public class PumpState {
 
-    boolean pumpHeating;
-
-    boolean pumpProcessWater;
-
-    boolean pumpSolar;
+    // Heizungspumpenstatus
+    boolean pumpHeating = false;
+    // Brauchwasserpumpenstatus
+    boolean pumpProcessWater = false;
+    // Solarpumpenstatus
+    boolean pumpSolar = false;
 
 }
