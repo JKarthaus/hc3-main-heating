@@ -4,7 +4,6 @@ import com.rabbitmq.client.BasicProperties;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Envelope;
 import de.karthaus.heatingControl3.model.HeatingControlContext;
-import io.micronaut.context.annotation.Property;
 import io.micronaut.context.annotation.Value;
 import io.micronaut.rabbitmq.annotation.Queue;
 import io.micronaut.rabbitmq.annotation.RabbitListener;
@@ -31,22 +30,22 @@ public class SensorDataConsumer {
     @Value("${hc3.sensor.inlet-grey-water-sensor-id}")
     protected String inletGreyWaterSensorID;
 
-    @Value("${hc3.sensor.greyWaterSensorID}")
+    @Value("${hc3.sensor.grey-water-Sensor-id}")
     protected String greyWaterSensorID;
 
-    @Property(name = "hc3.sensor.outletSolarSensorID")
+    @Value("${hc3.sensor.outlet-solar-sensor-id}")
     protected String outletSolarSensorID;
 
-    @Property(name = "hc3.sensor.inletHeatingSensorID")
+    @Value("${hc3.sensor.inlet-heating-sensor-id}")
     protected String inletHeatingSensorID;
 
-    @Property(name = "hc3.sensor.outdoorSensorID")
+    @Value("${hc3.sensor.outdoor-sensor-id}")
     protected String outdoorSensorID;
 
-    @Property(name = "hc3.temperatureQueue.name")
+    @Value("${hc3.temperature-queue.name}")
     protected String temperatureQueue;
 
-    @Property(name = "rabbitmq.uri")
+    @Value("${rabbitmq.uri}")
     protected String rabbitMqHost;
 
 
@@ -58,7 +57,7 @@ public class SensorDataConsumer {
         log.debug("outletSolarSensorID:{}", outletSolarSensorID);
         log.debug("inletHeatingSensorID:{}", inletHeatingSensorID);
         log.debug("outdoorSensorID:{}", outdoorSensorID);
-        log.info("Listening on RabbitMQ - Host:{}",rabbitMqHost);
+        log.info("Listening on RabbitMQ - Host:{}", rabbitMqHost);
     }
 
 

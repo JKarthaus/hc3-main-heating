@@ -15,22 +15,21 @@ micronaut:
 rabbitmq:
   uri: amqp://hc3-werkstatt:5672
 # Programm configuration
-test: hc-temperature
 hc3:
   influxdb:
     url: http://localhost:8086
     username: hc3
     password: hc3
-  temperatureQueue:
+  temperature-queue:
     name: hc-temperature
   relais-exchange:
     name: hc-relais-hat
   sensor:
     inlet-grey-water-sensor-id: "-"
-    greyWaterSensorID: " "
-    outletSolarSensorID: " "
-    inletHeatingSensorID: " "
-    outdoorSensorID: " "
+    grey-water-Sensor-id: " "
+    outlet-solar-sensor-id: " "
+    inlet-heating-sensor-id: " "
+    outdoor-sensor-id: " "
   pump:
     heating:
       relais-id: 2
