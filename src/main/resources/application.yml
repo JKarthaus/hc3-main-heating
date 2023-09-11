@@ -18,7 +18,7 @@ rabbitmq:
 # Programm configuration
 hc3:
   influxdb:
-    url: http://localhost:8086
+    url: http://localhost:80861
     username: hc3
     password: hc3
   temperature-queue:

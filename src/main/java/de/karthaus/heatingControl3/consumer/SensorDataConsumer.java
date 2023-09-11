@@ -45,7 +45,7 @@ public class SensorDataConsumer {
     @Value("${hc3.temperature-queue.name}")
     protected String temperatureQueue;
 
-    @Value("${rabbitmq.uri}")
+    @Value("${rabbitmq.host}")
     protected String rabbitMqHost;
 
 
