@@ -13,7 +13,8 @@ micronaut:
         paths: 'classpath:META-INF/swagger/views/swagger-ui'
 # Message Bus configuration - DEV Enviroment
 rabbitmq:
-  uri: amqp://hc3-werkstatt:5672
+  host: hc3-werkstatt
+  port: 5672
 # Programm configuration
 hc3:
   influxdb:
